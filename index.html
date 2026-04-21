@@ -1,0 +1,2612 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>다낭 환전 · 카지노 · 골프 컨시어지</title>
+    <meta name="description" content="다낭 여행, 카지노, 골프 이동 동선에 맞춘 프리미엄 환전 컨시어지 랜딩페이지" />
+    <meta name="theme-color" content="#0c1222" />
+    <style>
+        :root {
+            --bg: #07111f;
+            --bg2: #0c1730;
+            --panel: #161f34;
+            --panel2: #1b2740;
+            --line: rgba(255, 255, 255, .09);
+            --line-strong: rgba(255, 255, 255, .14);
+            --text: #f7f8fb;
+            --muted: #b8c0d6;
+            --soft: #dfe6f7;
+            --gold: #f2cf88;
+            --gold2: #ffd977;
+            --kakao: #fee500;
+            --kakaoText: #2f2a1f;
+            --telegram: #2aabee;
+            --telegramDark: #189ad6;
+            --shadow: 0 18px 60px rgba(0, 0, 0, .28);
+            --radius: 24px;
+            --max: 1200px;
+        }
+
+        * {
+            box-sizing: border-box
+        }
+
+        html {
+            scroll-behavior: smooth
+        }
+
+        body {
+            margin: 0;
+            font-family: -apple-system, BlinkMacSystemFont, "Apple SD Gothic Neo", "Pretendard", "Noto Sans KR", "Segoe UI", sans-serif;
+            color: var(--text);
+            background:
+                radial-gradient(circle at 15% 0%, rgba(82, 110, 255, .16), transparent 30%),
+                radial-gradient(circle at 85% 10%, rgba(255, 160, 122, .09), transparent 26%),
+                linear-gradient(180deg, #07111f 0%, #0a1327 40%, #0c1830 100%);
+            line-height: 1.6;
+        }
+
+        a {
+            color: inherit;
+            text-decoration: none
+        }
+
+        img {
+            display: block;
+            max-width: 100%
+        }
+
+        .container {
+            width: min(calc(100% - 32px), var(--max));
+            margin: 0 auto
+        }
+
+        .section {
+            padding: 88px 0
+        }
+
+        .card {
+            background: linear-gradient(180deg, rgba(255, 255, 255, .055), rgba(255, 255, 255, .03));
+            border: 1px solid var(--line);
+            border-radius: 26px;
+            box-shadow: var(--shadow);
+        }
+
+        .eyebrow {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 8px 12px;
+            border-radius: 999px;
+            font-size: 11px;
+            font-weight: 800;
+            letter-spacing: .16em;
+            text-transform: uppercase;
+            color: var(--gold);
+            background: rgba(255, 255, 255, .04);
+            border: 1px solid rgba(255, 255, 255, .08);
+            white-space: nowrap;
+        }
+
+        .eyebrow::before {
+            content: "•";
+            color: var(--gold);
+            font-size: 13px;
+            line-height: 1;
+        }
+
+        .section-head {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-end;
+            gap: 24px;
+            margin-bottom: 26px;
+        }
+
+        .section-head h2 {
+            margin: 12px 0 0;
+            font-size: clamp(30px, 3vw, 44px);
+            line-height: 1.12;
+            letter-spacing: -.04em;
+        }
+
+        .section-head p {
+            margin: 0;
+            max-width: 620px;
+            color: var(--muted);
+            font-size: 14px;
+        }
+
+        .scene-divider {
+            position: relative;
+            padding: 22px 0 0;
+        }
+
+        .scene-divider .line {
+            width: min(calc(100% - 32px), var(--max));
+            height: 1px;
+            margin: 0 auto;
+            background: linear-gradient(90deg, transparent 0%, rgba(255, 255, 255, .14) 12%, rgba(255, 255, 255, .14) 88%, transparent 100%);
+            position: relative;
+        }
+
+        .scene-divider .label {
+            position: absolute;
+            left: 50%;
+            top: 0;
+            transform: translate(-50%, -50%);
+            padding: 8px 14px;
+            border-radius: 999px;
+            background: #10192f;
+            border: 1px solid rgba(255, 255, 255, .09);
+            color: var(--gold);
+            font-size: 11px;
+            font-weight: 800;
+            letter-spacing: .16em;
+            text-transform: uppercase;
+            white-space: nowrap;
+        }
+
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 50px;
+            padding: 0 18px;
+            border-radius: 999px;
+            font-size: 14px;
+            font-weight: 800;
+            border: 1px solid transparent;
+            transition: .25s ease;
+            white-space: nowrap;
+            cursor: pointer;
+        }
+
+        .btn:hover {
+            transform: translateY(-2px)
+        }
+
+        .btn-gold {
+            color: #2a2014;
+            background: linear-gradient(135deg, #ffe3a9, var(--gold));
+            box-shadow: 0 10px 24px rgba(242, 207, 136, .24);
+        }
+
+        .btn-dark {
+            color: #fff;
+            background: rgba(255, 255, 255, .06);
+            border-color: rgba(255, 255, 255, .12);
+        }
+
+        .btn-kakao {
+            background: var(--kakao);
+            color: var(--kakaoText);
+            box-shadow: 0 10px 24px rgba(254, 229, 0, .22);
+        }
+
+        .btn-telegram {
+            background: linear-gradient(135deg, var(--telegram), var(--telegramDark));
+            color: #fff;
+            box-shadow: 0 10px 24px rgba(42, 171, 238, .22);
+        }
+
+        .chip-row {
+            display: flex;
+            gap: 8px;
+            flex-wrap: wrap;
+        }
+
+        .tag-chip {
+            padding: 7px 10px;
+            border-radius: 999px;
+            font-size: 11px;
+            font-weight: 700;
+            color: #d7deef;
+            background: rgba(255, 255, 255, .05);
+            border: 1px solid rgba(255, 255, 255, .08);
+        }
+
+        /* HEADER */
+        .site-header {
+            position: sticky;
+            top: 0;
+            z-index: 60;
+            background: rgba(6, 10, 20, .74);
+            backdrop-filter: blur(14px);
+            border-bottom: 1px solid rgba(255, 255, 255, .07);
+        }
+
+        .nav {
+            min-height: 72px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 18px;
+        }
+
+        .brand {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-size: 14px;
+            font-weight: 900;
+            letter-spacing: .03em;
+        }
+
+        .brand-badge {
+            width: 34px;
+            height: 34px;
+            border-radius: 11px;
+            display: grid;
+            place-items: center;
+            background: linear-gradient(135deg, #ff6b6b, #ff4c4c);
+            box-shadow: 0 8px 18px rgba(255, 76, 76, .26);
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 14px;
+            flex-wrap: wrap;
+            font-size: 12px;
+            color: #d8e0f5;
+        }
+
+        .nav-links a {
+            opacity: .88
+        }
+
+        .nav-links a:hover {
+            opacity: 1
+        }
+
+        /* HERO - 12번 느낌 고정 */
+        .hero {
+            position: relative;
+            min-height: 760px;
+            display: flex;
+            align-items: flex-end;
+            overflow: hidden;
+            background:
+                linear-gradient(180deg, rgba(5, 11, 22, .20) 0%, rgba(5, 11, 22, .36) 30%, rgba(5, 11, 22, .82) 100%),
+                url("https://images.unsplash.com/photo-1528127269322-539801943592?auto=format&fit=crop&w=1800&q=80") center center/cover no-repeat;
+        }
+
+        .hero::before {
+            content: "";
+            position: absolute;
+            inset: 0;
+            background:
+                radial-gradient(circle at 18% 18%, rgba(255, 255, 255, .12), transparent 18%),
+                radial-gradient(circle at 82% 10%, rgba(160, 194, 255, .15), transparent 22%);
+            pointer-events: none;
+        }
+
+        .hero-inner {
+            position: relative;
+            z-index: 1;
+            width: min(calc(100% - 32px), var(--max));
+            margin: 0 auto;
+            padding: 96px 0 74px;
+            display: grid;
+            grid-template-columns: 1.05fr .95fr;
+            gap: 30px;
+            align-items: end;
+        }
+
+        .hero-copy h1 {
+            margin: 14px 0 14px;
+            font-size: clamp(42px, 5vw, 66px);
+            line-height: 1.02;
+            letter-spacing: -.05em;
+            max-width: 650px;
+        }
+
+        .hero-copy p {
+            margin: 0 0 24px;
+            max-width: 620px;
+            color: #e5ebfb;
+            font-size: 15px;
+        }
+
+        .hero-actions {
+            display: flex;
+            gap: 12px;
+            flex-wrap: wrap;
+            margin-bottom: 18px;
+        }
+
+        .hero-meta {
+            display: flex;
+            gap: 10px;
+            flex-wrap: wrap;
+        }
+
+        .meta-chip {
+            padding: 9px 13px;
+            border-radius: 999px;
+            font-size: 12px;
+            color: #ecf2ff;
+            background: rgba(255, 255, 255, .10);
+            border: 1px solid rgba(255, 255, 255, .12);
+        }
+
+        .hero-panel {
+            padding: 22px;
+            border-radius: 24px;
+            background: linear-gradient(180deg, rgba(22, 29, 48, .84), rgba(22, 29, 48, .72));
+            border: 1px solid rgba(255, 255, 255, .11);
+            box-shadow: var(--shadow);
+            backdrop-filter: blur(10px);
+        }
+
+        .hero-panel h3 {
+            margin: 0 0 10px;
+            font-size: 20px;
+            letter-spacing: -.03em;
+        }
+
+        .hero-panel p {
+            margin: 0 0 14px;
+            color: var(--muted);
+            font-size: 13px;
+        }
+
+        .hero-points {
+            display: grid;
+            gap: 10px;
+        }
+
+        .hero-point {
+            display: flex;
+            gap: 12px;
+            padding: 12px 14px;
+            border-radius: 16px;
+            background: rgba(255, 255, 255, .045);
+            border: 1px solid rgba(255, 255, 255, .08);
+        }
+
+        .hero-point i {
+            width: 32px;
+            height: 32px;
+            flex: 0 0 32px;
+            display: grid;
+            place-items: center;
+            border-radius: 10px;
+            font-style: normal;
+            font-weight: 900;
+            font-size: 12px;
+            background: rgba(255, 255, 255, .08);
+            border: 1px solid rgba(255, 255, 255, .08);
+        }
+
+        .hero-point strong {
+            display: block;
+            font-size: 13px
+        }
+
+        .hero-point span {
+            display: block;
+            font-size: 12px;
+            color: var(--muted)
+        }
+
+        /* MARQUEE - 11번 느낌 */
+        .showcase-shell {
+            position: relative;
+            padding: 16px 0 14px;
+            overflow: hidden;
+            background: linear-gradient(180deg, rgba(255, 255, 255, .02), rgba(255, 255, 255, 0));
+        }
+
+        .showcase-wrap {
+            width: 100%;
+            overflow: hidden;
+            mask-image: linear-gradient(to right, transparent 0%, #000 4%, #000 96%, transparent 100%);
+            -webkit-mask-image: linear-gradient(to right, transparent 0%, #000 4%, #000 96%, transparent 100%);
+        }
+
+        .showcase-track {
+            display: flex;
+            gap: 14px;
+            width: max-content;
+            padding: 0 18px;
+            animation: marqueeLeft 34s linear infinite;
+            will-change: transform;
+        }
+
+        .showcase-shell:hover .showcase-track {
+            animation-play-state: paused
+        }
+
+        .showcase-card {
+            width: 170px;
+            flex: 0 0 170px;
+            border-radius: 18px;
+            overflow: hidden;
+            border: 1px solid rgba(255, 255, 255, .09);
+            background: linear-gradient(180deg, rgba(255, 255, 255, .08), rgba(255, 255, 255, .04));
+            box-shadow: 0 12px 24px rgba(0, 0, 0, .20);
+        }
+
+        .showcase-card img {
+            width: 100%;
+            height: 108px;
+            object-fit: cover;
+            transition: transform .4s ease;
+        }
+
+        .showcase-card:hover img {
+            transform: scale(1.05)
+        }
+
+        .showcase-copy {
+            padding: 10px 12px 12px;
+            background: linear-gradient(180deg, rgba(11, 20, 39, .08), rgba(11, 20, 39, .34));
+        }
+
+        .showcase-copy h3 {
+            margin: 0 0 4px;
+            font-size: 13px;
+            font-weight: 800;
+            letter-spacing: -.02em;
+            line-height: 1.2;
+        }
+
+        .showcase-copy p {
+            margin: 0;
+            color: var(--muted);
+            font-size: 11px;
+            line-height: 1.35;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+
+        @keyframes marqueeLeft {
+            0% {
+                transform: translateX(0)
+            }
+
+            100% {
+                transform: translateX(-50%)
+            }
+        }
+
+        /* CALCULATOR */
+        .calc-intro {
+            margin-bottom: 26px;
+        }
+
+        .calc-intro h2 {
+            margin: 14px 0 12px;
+            font-size: clamp(34px, 4vw, 58px);
+            line-height: 1.04;
+            letter-spacing: -.05em;
+            max-width: 850px;
+        }
+
+        .calc-intro .gold {
+            color: var(--gold2)
+        }
+
+        .calc-intro p {
+            margin: 0;
+            max-width: 760px;
+            color: #d5ddf1;
+            font-size: 15px;
+        }
+
+        .calc-layout {
+            display: grid;
+            grid-template-columns: 1.04fr .96fr;
+            gap: 18px;
+            align-items: start;
+        }
+
+        .calc-main {
+            padding: 22px;
+        }
+
+        .calc-main h3 {
+            margin: 14px 0 8px;
+            font-size: clamp(28px, 3vw, 42px);
+            line-height: 1.06;
+            letter-spacing: -.04em;
+        }
+
+        .calc-main .desc {
+            margin: 0 0 18px;
+            color: var(--muted);
+            font-size: 14px;
+        }
+
+        .calc-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 12px;
+            margin-bottom: 14px;
+        }
+
+        .field {
+            display: flex;
+            flex-direction: column;
+            gap: 8px
+        }
+
+        .field label {
+            font-size: 13px;
+            font-weight: 700;
+            color: #e3ebff;
+        }
+
+        .field input {
+            width: 100%;
+            min-height: 54px;
+            border-radius: 16px;
+            border: 1px solid rgba(255, 255, 255, .10);
+            outline: none;
+            background: rgba(9, 14, 25, .45);
+            color: #fff;
+            font-size: 15px;
+            padding: 0 16px;
+        }
+
+        .field input:focus {
+            border-color: rgba(255, 215, 107, .55);
+            box-shadow: 0 0 0 4px rgba(255, 215, 107, .08);
+        }
+
+        .calc-actions {
+            display: flex;
+            gap: 10px;
+            flex-wrap: wrap;
+            margin-bottom: 14px;
+        }
+
+        .calc-preview {
+            padding: 18px;
+            border-radius: 20px;
+            background: linear-gradient(180deg, rgba(255, 255, 255, .03), rgba(255, 255, 255, .015));
+            border: 1px solid rgba(255, 255, 255, .08);
+        }
+
+        .calc-preview .label {
+            font-size: 12px;
+            color: #c7d1ea;
+            margin-bottom: 8px;
+        }
+
+        .calc-preview .big {
+            font-size: clamp(34px, 3vw, 50px);
+            line-height: 1;
+            font-weight: 900;
+            letter-spacing: -.04em;
+            margin-bottom: 14px;
+        }
+
+        .calc-preview-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 10px;
+            margin-bottom: 10px;
+        }
+
+        .mini-metric {
+            padding: 12px;
+            border-radius: 16px;
+            background: rgba(255, 255, 255, .04);
+            border: 1px solid rgba(255, 255, 255, .08);
+        }
+
+        .mini-metric span {
+            display: block;
+            font-size: 11px;
+            color: #b8c0d6;
+            margin-bottom: 4px;
+        }
+
+        .mini-metric strong {
+            display: block;
+            font-size: 13px;
+            color: #fff;
+        }
+
+        .calc-note {
+            margin: 0;
+            font-size: 12px;
+            color: #aeb8d1;
+        }
+
+        .calc-side {
+            display: grid;
+            gap: 12px;
+        }
+
+        .info-box {
+            padding: 18px;
+            border-radius: 20px;
+            background: rgba(255, 255, 255, .035);
+            border: 1px solid rgba(255, 255, 255, .08);
+        }
+
+        .info-box h4 {
+            margin: 0 0 8px;
+            font-size: 15px;
+            color: #ffd98c;
+            letter-spacing: -.02em;
+        }
+
+        .info-box p {
+            margin: 0;
+            color: #d0d8ec;
+            font-size: 13px;
+            line-height: 1.55;
+        }
+
+        .side-cta {
+            padding: 16px;
+            border-radius: 22px;
+            background: linear-gradient(180deg, rgba(255, 255, 255, .04), rgba(255, 255, 255, .02));
+            border: 1px solid rgba(255, 255, 255, .08);
+            display: grid;
+            gap: 10px;
+        }
+
+        /* TRAVEL REALITY */
+        .reality-head {
+            margin-bottom: 20px;
+        }
+
+        .reality-head h2 {
+            margin: 14px 0 10px;
+            font-size: clamp(32px, 3.4vw, 50px);
+            line-height: 1.08;
+            letter-spacing: -.04em;
+            max-width: 820px;
+        }
+
+        .reality-head p {
+            margin: 0;
+            max-width: 760px;
+            color: var(--muted);
+            font-size: 14px;
+        }
+
+        .accent {
+            color: var(--gold2);
+            font-weight: 900
+        }
+
+        .reality-grid {
+            display: grid;
+            grid-template-columns: 1.24fr .76fr;
+            gap: 18px;
+            align-items: start;
+        }
+
+        .feature-media {
+            position: relative;
+            min-height: 520px;
+            overflow: hidden;
+            border-radius: 28px;
+            border: 1px solid rgba(255, 255, 255, .08);
+            box-shadow: var(--shadow);
+            background:
+                linear-gradient(180deg, rgba(7, 12, 23, .05), rgba(7, 12, 23, .88)),
+                url("https://images.unsplash.com/photo-1525625293386-3f8f99389edd?auto=format&fit=crop&w=1600&q=80") center center/cover no-repeat;
+        }
+
+        .feature-overlay {
+            position: absolute;
+            inset: auto 0 0 0;
+            padding: 26px;
+            background: linear-gradient(180deg, rgba(7, 12, 23, 0), rgba(7, 12, 23, .92));
+        }
+
+        .feature-overlay h3 {
+            margin: 0 0 10px;
+            font-size: 34px;
+            line-height: 1.08;
+            letter-spacing: -.04em;
+            max-width: 520px;
+        }
+
+        .feature-overlay p {
+            margin: 0;
+            color: #dde5fa;
+            font-size: 14px;
+            max-width: 520px;
+        }
+
+        .mini-stack {
+            display: grid;
+            gap: 12px
+        }
+
+        .mini-card {
+            padding: 14px;
+            border-radius: 20px;
+            background: rgba(255, 255, 255, .04);
+            border: 1px solid rgba(255, 255, 255, .08);
+            box-shadow: var(--shadow);
+        }
+
+        .mini-card-top {
+            display: grid;
+            grid-template-columns: 92px 1fr;
+            gap: 14px;
+            align-items: center;
+            margin-bottom: 12px;
+        }
+
+        .mini-card img {
+            width: 100%;
+            height: 84px;
+            object-fit: cover;
+            border-radius: 14px;
+        }
+
+        .mini-card h4 {
+            margin: 0 0 6px;
+            font-size: 17px;
+            letter-spacing: -.02em;
+        }
+
+        .mini-card p {
+            margin: 0;
+            color: var(--muted);
+            font-size: 13px;
+            line-height: 1.5;
+        }
+
+        /* SOLUTION */
+        .solution-layout {
+            display: grid;
+            grid-template-columns: 1fr 1.06fr;
+            gap: 18px;
+            align-items: stretch;
+        }
+
+        .solution-visual {
+            min-height: 430px;
+            position: relative;
+            overflow: hidden;
+            border-radius: 28px;
+            border: 1px solid rgba(255, 255, 255, .08);
+            box-shadow: var(--shadow);
+            background:
+                linear-gradient(180deg, rgba(7, 12, 23, .08), rgba(7, 12, 23, .86)),
+                url("https://images.unsplash.com/photo-1497366754035-f200968a6e72?auto=format&fit=crop&w=1600&q=80") center center/cover no-repeat;
+        }
+
+        .solution-visual .copy {
+            position: absolute;
+            inset: auto 0 0 0;
+            padding: 26px;
+        }
+
+        .solution-visual h3 {
+            margin: 0 0 10px;
+            font-size: 34px;
+            line-height: 1.08;
+            letter-spacing: -.04em;
+        }
+
+        .solution-visual p {
+            margin: 0;
+            max-width: 500px;
+            color: #dde5fa;
+            font-size: 14px;
+        }
+
+        .solution-card {
+            padding: 24px;
+        }
+
+        .solution-card h3 {
+            margin: 14px 0 10px;
+            font-size: 30px;
+            line-height: 1.08;
+            letter-spacing: -.04em;
+        }
+
+        .solution-card p {
+            margin: 0 0 18px;
+            color: var(--muted);
+            font-size: 14px;
+        }
+
+        .solution-steps {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 12px;
+        }
+
+        .step-card {
+            padding: 18px;
+            border-radius: 20px;
+            background: rgba(255, 255, 255, .04);
+            border: 1px solid rgba(255, 255, 255, .08);
+        }
+
+        .step-icon {
+            width: 40px;
+            height: 40px;
+            display: grid;
+            place-items: center;
+            border-radius: 12px;
+            margin-bottom: 12px;
+            font-size: 18px;
+            background: linear-gradient(135deg, rgba(255, 217, 140, .18), rgba(255, 255, 255, .06));
+            border: 1px solid rgba(255, 255, 255, .08);
+        }
+
+        .step-card .step-mini {
+            display: block;
+            font-size: 11px;
+            font-weight: 800;
+            letter-spacing: .12em;
+            text-transform: uppercase;
+            color: var(--gold);
+            margin-bottom: 6px;
+        }
+
+        .step-card h4 {
+            margin: 0 0 8px;
+            font-size: 15px;
+            line-height: 1.35;
+        }
+
+        .step-card p {
+            margin: 0;
+            font-size: 13px;
+            line-height: 1.55;
+            color: var(--muted);
+        }
+
+        /* EXCHANGE SERVICE */
+        .service-layout {
+            display: grid;
+            grid-template-columns: 1.04fr .96fr;
+            gap: 18px;
+            align-items: start;
+            margin-top: 22px;
+        }
+
+        .service-visual {
+            min-height: 540px;
+            position: relative;
+            overflow: hidden;
+            border-radius: 28px;
+            border: 1px solid rgba(255, 255, 255, .08);
+            box-shadow: var(--shadow);
+            background:
+                linear-gradient(180deg, rgba(7, 12, 23, .04), rgba(7, 12, 23, .88)),
+                url("https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=1800&q=80") center center/cover no-repeat;
+        }
+
+        .service-visual .copy {
+            position: absolute;
+            inset: auto 0 0 0;
+            padding: 26px;
+        }
+
+        .service-visual h3 {
+            margin: 0 0 10px;
+            font-size: 34px;
+            line-height: 1.08;
+            letter-spacing: -.04em;
+            max-width: 520px;
+        }
+
+        .service-visual p {
+            margin: 0;
+            max-width: 520px;
+            color: #dde5fa;
+            font-size: 14px;
+        }
+
+        .service-panel {
+            padding: 18px;
+            display: grid;
+            gap: 14px;
+        }
+
+        .moment-card {
+            padding: 18px;
+            border-radius: 20px;
+            background: rgba(255, 255, 255, .04);
+            border: 1px solid rgba(255, 255, 255, .08);
+        }
+
+        .moment-card h4 {
+            margin: 0 0 10px;
+            font-size: 16px;
+            letter-spacing: -.02em;
+        }
+
+        .moment-stack {
+            display: grid;
+            gap: 10px;
+        }
+
+        .moment-item {
+            display: flex;
+            gap: 10px;
+            align-items: flex-start;
+            padding: 12px 14px;
+            border-radius: 16px;
+            background: rgba(255, 255, 255, .03);
+            border: 1px solid rgba(255, 255, 255, .07);
+        }
+
+        .moment-badge {
+            flex: 0 0 auto;
+            padding: 6px 9px;
+            border-radius: 999px;
+            font-size: 11px;
+            font-weight: 800;
+            color: #ffe08a;
+            border: 1px solid rgba(255, 224, 138, .22);
+            background: rgba(255, 224, 138, .10);
+            margin-top: 2px;
+        }
+
+        .moment-item strong {
+            display: block;
+            margin-bottom: 2px;
+            font-size: 14px;
+        }
+
+        .moment-item span {
+            display: block;
+            color: var(--muted);
+            font-size: 12px;
+            line-height: 1.45;
+        }
+
+        .contact-block {
+            padding: 18px;
+            border-radius: 22px;
+            background: rgba(255, 255, 255, .04);
+            border: 1px solid rgba(255, 255, 255, .08);
+        }
+
+        .contact-block h4 {
+            margin: 0 0 8px;
+            font-size: 16px;
+        }
+
+        .contact-block p {
+            margin: 0 0 14px;
+            color: var(--muted);
+            font-size: 13px;
+            line-height: 1.55;
+        }
+
+        .contact-row {
+            display: flex;
+            gap: 10px;
+            flex-wrap: wrap;
+        }
+
+        .service-bottom {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 16px;
+            margin-top: 18px;
+        }
+
+        .service-mini {
+            overflow: hidden;
+            border-radius: 22px;
+            border: 1px solid rgba(255, 255, 255, .08);
+            background: rgba(255, 255, 255, .04);
+            box-shadow: var(--shadow);
+        }
+
+        .service-mini img {
+            width: 100%;
+            height: 150px;
+            object-fit: cover;
+        }
+
+        .service-mini .copy {
+            padding: 16px;
+        }
+
+        .service-mini h4 {
+            margin: 0 0 8px;
+            font-size: 16px;
+            letter-spacing: -.02em;
+        }
+
+        .service-mini p {
+            margin: 0;
+            font-size: 13px;
+            color: var(--muted);
+            line-height: 1.55;
+        }
+
+        /* FLOW */
+        .flow-wrap {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 18px;
+            align-items: stretch;
+        }
+
+        .flow-visual {
+            min-height: 420px;
+            position: relative;
+            overflow: hidden;
+            border-radius: 28px;
+            border: 1px solid rgba(255, 255, 255, .08);
+            box-shadow: var(--shadow);
+            background:
+                linear-gradient(180deg, rgba(7, 12, 23, .10), rgba(7, 12, 23, .86)),
+                url("https://images.unsplash.com/photo-1535131749006-b7f58c99034b?auto=format&fit=crop&w=1600&q=80") center center/cover no-repeat;
+        }
+
+        .flow-visual .copy {
+            position: absolute;
+            inset: auto 0 0 0;
+            padding: 26px;
+        }
+
+        .flow-visual h3 {
+            margin: 0 0 10px;
+            font-size: 34px;
+            line-height: 1.08;
+            letter-spacing: -.04em;
+            max-width: 540px;
+        }
+
+        .flow-visual p {
+            margin: 0;
+            max-width: 520px;
+            color: #dde5fa;
+            font-size: 14px;
+        }
+
+        .flow-card {
+            padding: 24px;
+        }
+
+        .flow-card h3 {
+            margin: 14px 0 10px;
+            font-size: 28px;
+            line-height: 1.1;
+            letter-spacing: -.04em;
+        }
+
+        .flow-card p {
+            margin: 0 0 18px;
+            color: var(--muted);
+            font-size: 14px;
+        }
+
+        .flow-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 12px;
+        }
+
+        .flow-item {
+            padding: 16px;
+            border-radius: 18px;
+            background: rgba(255, 255, 255, .04);
+            border: 1px solid rgba(255, 255, 255, .08);
+        }
+
+        .flow-item .no {
+            width: 34px;
+            height: 34px;
+            display: grid;
+            place-items: center;
+            border-radius: 12px;
+            font-size: 12px;
+            font-weight: 900;
+            margin-bottom: 10px;
+            background: rgba(255, 255, 255, .08);
+            border: 1px solid rgba(255, 255, 255, .08);
+        }
+
+        .flow-item h4 {
+            margin: 0 0 6px;
+            font-size: 15px
+        }
+
+        .flow-item p {
+            margin: 0;
+            font-size: 12px;
+            color: var(--muted);
+            line-height: 1.45;
+        }
+
+        /* WHY */
+        .why-head {
+            margin-bottom: 22px;
+        }
+
+        .why-head h2 {
+            margin: 14px 0 10px;
+            font-size: clamp(32px, 3.4vw, 48px);
+            line-height: 1.08;
+            letter-spacing: -.04em;
+        }
+
+        .why-head p {
+            margin: 0;
+            max-width: 760px;
+            color: var(--muted);
+            font-size: 14px;
+        }
+
+        .why-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 16px;
+        }
+
+        .why-row-card {
+            display: grid;
+            grid-template-columns: 47% 53%;
+            overflow: hidden;
+            border-radius: 22px;
+            border: 1px solid rgba(255, 255, 255, .08);
+            background: rgba(255, 255, 255, .04);
+            box-shadow: var(--shadow);
+            min-height: 160px;
+        }
+
+        .why-row-card img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .why-row-card .copy {
+            padding: 18px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .why-row-card h4 {
+            margin: 0 0 8px;
+            font-size: 18px;
+            letter-spacing: -.02em;
+        }
+
+        .why-row-card p {
+            margin: 0;
+            color: var(--muted);
+            font-size: 13px;
+            line-height: 1.55;
+        }
+
+        /* REVIEWS */
+        .reviews-head h2 {
+            margin: 14px 0 10px;
+            font-size: clamp(30px, 3vw, 40px);
+            line-height: 1.12;
+            letter-spacing: -.04em;
+        }
+
+        .reviews-head p {
+            margin: 0;
+            max-width: 760px;
+            color: var(--muted);
+            font-size: 14px;
+        }
+
+        .reviews {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 16px;
+            margin-top: 22px;
+        }
+
+        .review {
+            padding: 22px;
+            border-radius: 22px;
+            background: rgba(255, 255, 255, .04);
+            border: 1px solid rgba(255, 255, 255, .08);
+            box-shadow: var(--shadow);
+        }
+
+        .stars {
+            color: #ffd56b;
+            letter-spacing: 2px;
+            margin-bottom: 12px;
+            font-size: 14px;
+        }
+
+        .review p {
+            margin: 0 0 14px;
+            color: #e9eefc;
+            font-size: 14px;
+            line-height: 1.6;
+        }
+
+        .review .author {
+            font-size: 13px;
+            color: var(--muted);
+        }
+
+        /* FAQ */
+        .faq-head h2 {
+            margin: 14px 0 10px;
+            font-size: clamp(30px, 3vw, 40px);
+            line-height: 1.12;
+            letter-spacing: -.04em;
+        }
+
+        .faq-head p {
+            margin: 0;
+            max-width: 760px;
+            color: var(--muted);
+            font-size: 14px;
+        }
+
+        .faq-list {
+            display: grid;
+            gap: 12px;
+            margin-top: 24px;
+        }
+
+        .faq-item {
+            border-radius: 18px;
+            overflow: hidden;
+            background: rgba(255, 255, 255, .04);
+            border: 1px solid rgba(255, 255, 255, .08);
+            box-shadow: var(--shadow);
+        }
+
+        .faq-item summary {
+            list-style: none;
+            cursor: pointer;
+            position: relative;
+            padding: 18px 20px;
+            padding-right: 54px;
+            font-size: 14px;
+            font-weight: 800;
+        }
+
+        .faq-item summary::-webkit-details-marker {
+            display: none
+        }
+
+        .faq-item summary::after {
+            content: "+";
+            position: absolute;
+            right: 18px;
+            top: 50%;
+            transform: translateY(-50%);
+            font-size: 22px;
+            color: #d5def5;
+        }
+
+        .faq-item[open] summary::after {
+            content: "−"
+        }
+
+        .faq-body {
+            padding: 0 20px 18px;
+            color: var(--muted);
+            font-size: 14px;
+            line-height: 1.6;
+        }
+
+        /* FINAL HERO - 13번 느낌 고정 */
+        .final-hero {
+            position: relative;
+            overflow: hidden;
+            margin-top: 26px;
+            background:
+                linear-gradient(180deg, rgba(5, 11, 22, .20) 0%, rgba(5, 11, 22, .46) 34%, rgba(5, 11, 22, .82) 100%),
+                url("https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=2000&q=80") center center/cover no-repeat;
+            border-top: 1px solid rgba(255, 255, 255, .08);
+        }
+
+        .final-inner {
+            padding: 96px 0 84px;
+            display: grid;
+            grid-template-columns: 1fr 420px;
+            gap: 26px;
+            align-items: center;
+        }
+
+        .final-copy h2 {
+            margin: 14px 0 14px;
+            font-size: clamp(42px, 5vw, 64px);
+            line-height: 1.02;
+            letter-spacing: -.05em;
+            max-width: 520px;
+        }
+
+        .final-copy h2 .gold {
+            color: var(--gold2)
+        }
+
+        .final-copy p {
+            margin: 0;
+            max-width: 540px;
+            color: #e5ebfb;
+            font-size: 15px;
+        }
+
+        .final-panel {
+            padding: 22px;
+            border-radius: 24px;
+            background: linear-gradient(180deg, rgba(25, 31, 45, .88), rgba(25, 31, 45, .78));
+            border: 1px solid rgba(255, 255, 255, .12);
+            box-shadow: var(--shadow);
+            backdrop-filter: blur(10px);
+        }
+
+        .final-panel h3 {
+            margin: 0 0 10px;
+            font-size: 20px;
+            letter-spacing: -.03em;
+        }
+
+        .final-panel p {
+            margin: 0 0 16px;
+            color: var(--muted);
+            font-size: 13px;
+            line-height: 1.55;
+        }
+
+        .final-list {
+            display: grid;
+            gap: 10px;
+            margin-bottom: 16px;
+        }
+
+        .final-list .item {
+            padding: 12px 14px;
+            border-radius: 16px;
+            background: rgba(255, 255, 255, .04);
+            border: 1px solid rgba(255, 255, 255, .08);
+        }
+
+        .final-list strong {
+            display: block;
+            margin-bottom: 4px;
+            font-size: 13px;
+            color: #ffd98c;
+        }
+
+        .final-list span {
+            display: block;
+            font-size: 12px;
+            color: #d1d9ec;
+        }
+
+        .final-actions {
+            display: grid;
+            gap: 10px;
+        }
+
+        footer {
+            background: linear-gradient(180deg, #0c1c34, #0a162b);
+            border-top: 1px solid rgba(255, 255, 255, .06);
+            padding: 34px 0 92px;
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: 1.2fr .7fr .7fr;
+            gap: 20px;
+            align-items: start;
+        }
+
+        .footer-col h4 {
+            margin: 0 0 10px;
+            font-size: 13px;
+            color: #fff;
+        }
+
+        .footer-col p,
+        .footer-col li,
+        .footer-col a {
+            margin: 0;
+            font-size: 12px;
+            color: #b9c3da;
+        }
+
+        .footer-col ul {
+            margin: 0;
+            padding-left: 16px;
+            line-height: 1.7;
+        }
+
+        .floating-cta {
+            position: fixed;
+            right: 18px;
+            bottom: 18px;
+            z-index: 70;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        .floating-cta .btn {
+            min-width: 160px;
+            min-height: 48px;
+            box-shadow: 0 14px 28px rgba(0, 0, 0, .22);
+        }
+
+        .mobile-cta {
+            display: none;
+            position: fixed;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            z-index: 71;
+            padding: 12px 14px calc(12px + env(safe-area-inset-bottom));
+            background: rgba(7, 11, 22, .94);
+            backdrop-filter: blur(12px);
+            border-top: 1px solid rgba(255, 255, 255, .10);
+            grid-template-columns: 1fr 1fr;
+            gap: 10px;
+        }
+
+        .mobile-cta .btn {
+            min-height: 52px
+        }
+
+        @media (max-width: 1120px) {
+
+            .hero-inner,
+            .calc-layout,
+            .reality-grid,
+            .solution-layout,
+            .service-layout,
+            .flow-wrap,
+            .final-inner,
+            .footer-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .solution-steps,
+            .service-bottom,
+            .reviews,
+            .why-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .hero {
+                min-height: auto
+            }
+        }
+
+        @media (max-width: 760px) {
+            .section {
+                padding: 72px 0
+            }
+
+            .nav {
+                min-height: 64px
+            }
+
+            .nav-links {
+                display: none
+            }
+
+            .hero-inner {
+                padding: 78px 0 56px
+            }
+
+            .hero-copy h1 {
+                font-size: 44px
+            }
+
+            .hero-copy p {
+                font-size: 15px
+            }
+
+            .showcase-card {
+                width: 156px;
+                flex: 0 0 156px
+            }
+
+            .showcase-card img {
+                height: 104px
+            }
+
+            .calc-grid,
+            .calc-preview-grid,
+            .solution-steps,
+            .reviews {
+                grid-template-columns: 1fr;
+            }
+
+            .mini-card-top,
+            .why-row-card {
+                grid-template-columns: 1fr;
+            }
+
+            .why-row-card img {
+                height: 180px
+            }
+
+            .feature-media,
+            .service-visual,
+            .flow-visual,
+            .solution-visual {
+                min-height: 400px
+            }
+
+            .floating-cta {
+                display: none
+            }
+
+            .mobile-cta {
+                display: grid
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!--
+    배포 전 교체용 placeholder 링크
+    1) 카카오: https://open.kakao.com/o/YOUR_KAKAO_OPENCHAT_LINK
+    2) 텔레그램: https://t.me/YOUR_TELEGRAM_USERNAME
+  -->
+
+    <header class="site-header">
+        <div class="container nav">
+            <a href="#top" class="brand" aria-label="홈으로 이동">
+                <span class="brand-badge">K</span>
+                <span>KOIANA CONCIERGE</span>
+            </a>
+            <nav class="nav-links" aria-label="주요 메뉴">
+                <a href="#calculator">환율 계산기</a>
+                <a href="#reality">Travel Reality</a>
+                <a href="#solution">Solution Structure</a>
+                <a href="#service">Exchange Service</a>
+                <a href="#flow">Golf & Travel Flow</a>
+                <a href="#reviews">Reviews</a>
+                <a href="#faq">자주하는 질문</a>
+            </nav>
+        </div>
+    </header>
+
+    <main id="top">
+
+        <!-- HERO -->
+        <section class="hero">
+            <div class="hero-inner">
+                <div class="hero-copy">
+                    <span class="eyebrow">Da Nang Travel Concierge</span>
+                    <h1>다낭의 아름다움<br />여행의 여유<br />편리한 환전</h1>
+                    <p>
+                        공항 도착부터 리조트, 카지노, 골프장 이동까지. 필요한 순간에 맞춰 환전 흐름을 설계하고,<br />
+                        이동 중 번거로움을 줄이는 다낭 맞춤형 컨시어지 서비스를 안내합니다.
+                    </p>
+                    <div class="hero-actions">
+                        <a class="btn btn-gold" href="#calculator">환율 계산기 보기</a>
+                        <a class="btn btn-dark" href="#service">서비스 안내</a>
+                    </div>
+                    <div class="hero-meta">
+                        <span class="meta-chip">다낭 공항 · 미케비치 · 리조트 동선</span>
+                        <span class="meta-chip">카지노 · 골프 일정 대응</span>
+                        <span class="meta-chip">카카오톡 · 텔레그램 빠른 문의</span>
+                    </div>
+                </div>
+
+                <aside class="hero-panel" aria-label="서비스 요약">
+                    <h3>여행 중 필요한 순간에 맞춘 안내</h3>
+                    <p>체크인 전후, 카지노 이동 전, 라운딩 전후처럼 실제 일정에 맞춘 환전 흐름을 제안합니다.</p>
+                    <div class="hero-points">
+                        <div class="hero-point">
+                            <i>01</i>
+                            <div>
+                                <strong>공항 도착 직후</strong>
+                                <span>초기 교통비 · 식사비 · 간단한 현금 사용 구간</span>
+                            </div>
+                        </div>
+                        <div class="hero-point">
+                            <i>02</i>
+                            <div>
+                                <strong>카지노 / 골프 이동 전</strong>
+                                <span>큰 금액이 필요한 타이밍을 미리 체크</span>
+                            </div>
+                        </div>
+                        <div class="hero-point">
+                            <i>03</i>
+                            <div>
+                                <strong>리조트 복귀 이후</strong>
+                                <span>남은 일정에 맞춰 추가 환전 여부를 조정</span>
+                            </div>
+                        </div>
+                    </div>
+                </aside>
+            </div>
+        </section>
+
+        <!-- MARQUEE -->
+        <section class="showcase-shell" aria-label="다낭 여행 마키 이미지">
+            <div class="showcase-wrap">
+                <div class="showcase-track">
+
+                    <article class="showcase-card">
+                        <img src="https://sspark.genspark.ai/cfimages?u1=u521pPE6C4F5jfY%2FFX3v3E0J9%2BNNchrPREt7LE0H1o9zVwYEtuoRQfZOu43xTMrgCRwhf3zy1MRoZW3H4VrGBC0%2Fvplxn7ui1FL%2BXV4TxMznDQ%3D%3D&u2=TirrS2JAl%2BHhnIUm&width=2560"
+                            alt="카지노 칩 이미지" />
+                        <div class="showcase-copy">
+                            <h3>Casino Night</h3>
+                            <p>카지노 입장 전 챙기는 흐름</p>
+                        </div>
+                    </article>
+
+                    <article class="showcase-card">
+                        <img src="https://sspark.genspark.ai/cfimages?u1=bavw89SoAL8LneVrQSkKTLBAm7%2BmECK8x3Hh3ilFBUKRxO2eOry832Px8sIhro3WH9oiS020n87PcdWiI7FX44t17kvgN6h28XWIUI0eQ2sSQg%3D%3D&u2=G1uMR5M4jAkIYvCM&width=2560"
+                            alt="카지노 테이블 이미지" />
+                        <div class="showcase-copy">
+                            <h3>Gaming Table</h3>
+                            <p>현지에서 바로 쓰는 실전 무드</p>
+                        </div>
+                    </article>
+
+                    <article class="showcase-card">
+                        <img src="https://sspark.genspark.ai/cfimages?u1=Jg%2BLY%2F5Y09NHszg%2BxITLxDdt0MgkW6F5OiMOLIafOE9Z%2Bl%2BSnaEEawJyQdree6gAxAVKVlN4uQcLWQMk6mpk%2BiravWLoAdu7KXjX%2BRdC03%2FXcDkwq%2FjY3PEex1lxM1h7rZARfr53AO9mR1h1pNFuvruammVRCAjn%2BrGod7v8m17KdQSlbvqM7mMTXyFAbZWUUw%3D%3D&u2=i53AegmUcbTpZarl&width=2560"
+                            alt="골프장 이미지" />
+                        <div class="showcase-copy">
+                            <h3>Green Fairway</h3>
+                            <p>여유 있는 골프 이동 및 결제</p>
+                        </div>
+                    </article>
+
+                    <article class="showcase-card">
+                        <img src="https://sspark.genspark.ai/cfimages?u1=wchkyQHI9ixDwqkgYIJ8ylFkOz%2BGc921ACNCkFGDrqhsiyfiPjfR%2FijFLr%2BZvuvMM%2FqXpXYO8M5k9fahK8pa9DhvwIHVvadRSuNprUe9PEl6sg%3D%3D&u2=J3MEnAyCCvw6MQjU&width=2560"
+                            alt="골프 스윙 이미지" />
+                        <div class="showcase-copy">
+                            <h3>Da Nang Golf</h3>
+                            <p>라운딩 전 준비하는 동선</p>
+                        </div>
+                    </article>
+
+                    <article class="showcase-card">
+                        <img src="https://sspark.genspark.ai/cfimages?u1=PEyZ0GoM9oXXx%2BRCCOv9ToZexZJg5agJzhjYF6h4tSJKeVKvaWu5vFS%2FZSBINh7KXXsaH9ou5WR4rAF8qurB9BCojD%2Bf5XO9MyhFi89uEhSizILn6MlJFzk%2FU9uxBmirz49xyZb1Lx6Cexadp1LE3doqBX46JwJ%2FHgp8zvk5jaEQ0MJQtF4AxkR6BDo%3D&u2=j4p8KP%2B8Sj7Ao3BO&width=2560"
+                            alt="다낭 해변 이미지" />
+                        <div class="showcase-copy">
+                            <h3>Da Nang Trip</h3>
+                            <p>여행 동선의 환전 수요</p>
+                        </div>
+                    </article>
+
+                    <article class="showcase-card">
+                        <img src="https://sspark.genspark.ai/cfimages?u1=CpoAKrjbrmXk4mZtwveXgPKDDonUdr1TuJ93oSJXS465uFVDrf0MjzqYAPTZmAlV8FaIc%2Buj3rDSkMz9%2Fw5ZevSPHGLC1QmAAtbc7%2BjgZWB94bnd4rQdu6AVchv48mEwKrKV7HLSmWwfT3eGQxsGCc4m191LKCUpL2zNSEI%2F5iwtGJg%3D&u2=RDj4dOQG2iq3ZHyP&width=2560"
+                            alt="리조트 이미지" />
+                        <div class="showcase-copy">
+                            <h3>Resort Escape</h3>
+                            <p>휴양과 소비 동선까지 고려</p>
+                        </div>
+                    </article>
+
+                    <!-- 반복 -->
+                    <article class="showcase-card">
+                        <img src="https://sspark.genspark.ai/cfimages?u1=u521pPE6C4F5jfY%2FFX3v3E0J9%2BNNchrPREt7LE0H1o9zVwYEtuoRQfZOu43xTMrgCRwhf3zy1MRoZW3H4VrGBC0%2Fvplxn7ui1FL%2BXV4TxMznDQ%3D%3D&u2=TirrS2JAl%2BHhnIUm&width=2560"
+                            alt="카지노 칩 이미지" />
+                        <div class="showcase-copy">
+                            <h3>Casino Night</h3>
+                            <p>카지노 입장 전 챙기는 흐름</p>
+                        </div>
+                    </article>
+
+                    <article class="showcase-card">
+                        <img src="https://sspark.genspark.ai/cfimages?u1=bavw89SoAL8LneVrQSkKTLBAm7%2BmECK8x3Hh3ilFBUKRxO2eOry832Px8sIhro3WH9oiS020n87PcdWiI7FX44t17kvgN6h28XWIUI0eQ2sSQg%3D%3D&u2=G1uMR5M4jAkIYvCM&width=2560"
+                            alt="카지노 테이블 이미지" />
+                        <div class="showcase-copy">
+                            <h3>Gaming Table</h3>
+                            <p>현지에서 바로 쓰는 실전 무드</p>
+                        </div>
+                    </article>
+
+                    <article class="showcase-card">
+                        <img src="https://sspark.genspark.ai/cfimages?u1=Jg%2BLY%2F5Y09NHszg%2BxITLxDdt0MgkW6F5OiMOLIafOE9Z%2Bl%2BSnaEEawJyQdree6gAxAVKVlN4uQcLWQMk6mpk%2BiravWLoAdu7KXjX%2BRdC03%2FXcDkwq%2FjY3PEex1lxM1h7rZARfr53AO9mR1h1pNFuvruammVRCAjn%2BrGod7v8m17KdQSlbvqM7mMTXyFAbZWUUw%3D%3D&u2=i53AegmUcbTpZarl&width=2560"
+                            alt="골프장 이미지" />
+                        <div class="showcase-copy">
+                            <h3>Green Fairway</h3>
+                            <p>여유 있는 골프 이동 및 결제</p>
+                        </div>
+                    </article>
+
+                    <article class="showcase-card">
+                        <img src="https://sspark.genspark.ai/cfimages?u1=wchkyQHI9ixDwqkgYIJ8ylFkOz%2BGc921ACNCkFGDrqhsiyfiPjfR%2FijFLr%2BZvuvMM%2FqXpXYO8M5k9fahK8pa9DhvwIHVvadRSuNprUe9PEl6sg%3D%3D&u2=J3MEnAyCCvw6MQjU&width=2560"
+                            alt="골프 스윙 이미지" />
+                        <div class="showcase-copy">
+                            <h3>Da Nang Golf</h3>
+                            <p>라운딩 전 준비하는 동선</p>
+                        </div>
+                    </article>
+
+                    <article class="showcase-card">
+                        <img src="https://sspark.genspark.ai/cfimages?u1=PEyZ0GoM9oXXx%2BRCCOv9ToZexZJg5agJzhjYF6h4tSJKeVKvaWu5vFS%2FZSBINh7KXXsaH9ou5WR4rAF8qurB9BCojD%2Bf5XO9MyhFi89uEhSizILn6MlJFzk%2FU9uxBmirz49xyZb1Lx6Cexadp1LE3doqBX46JwJ%2FHgp8zvk5jaEQ0MJQtF4AxkR6BDo%3D&u2=j4p8KP%2B8Sj7Ao3BO&width=2560"
+                            alt="다낭 해변 이미지" />
+                        <div class="showcase-copy">
+                            <h3>Da Nang Trip</h3>
+                            <p>여행 동선의 환전 수요</p>
+                        </div>
+                    </article>
+
+                    <article class="showcase-card">
+                        <img src="https://sspark.genspark.ai/cfimages?u1=CpoAKrjbrmXk4mZtwveXgPKDDonUdr1TuJ93oSJXS465uFVDrf0MjzqYAPTZmAlV8FaIc%2Buj3rDSkMz9%2Fw5ZevSPHGLC1QmAAtbc7%2BjgZWB94bnd4rQdu6AVchv48mEwKrKV7HLSmWwfT3eGQxsGCc4m191LKCUpL2zNSEI%2F5iwtGJg%3D&u2=RDj4dOQG2iq3ZHyP&width=2560"
+                            alt="리조트 이미지" />
+                        <div class="showcase-copy">
+                            <h3>Resort Escape</h3>
+                            <p>휴양과 소비 동선까지 고려</p>
+                        </div>
+                    </article>
+
+                </div>
+            </div>
+        </section>
+
+        <div class="scene-divider" aria-hidden="true">
+            <div class="line"><span class="label">Exchange Calculator</span></div>
+        </div>
+
+        <!-- CALCULATOR -->
+        <section id="calculator" class="section">
+            <div class="container">
+                <div class="calc-intro">
+                    <span class="eyebrow">Exchange Calculator</span>
+                    <h2>환율계산기<br />
+                    </h2>
+                    <p>
+                        원화 금액을 입력하면 다낭 일정에서 참고할 수 있는 예상 수령액을 계산합니다.
+
+                    </p>
+                </div>
+
+                <div class="calc-layout">
+                    <article class="card calc-main">
+                        <span class="eyebrow">실사용 계산기</span>
+                        <h3>지금 얼마나 바꿀 수 있을까요?</h3>
+                        <p class="desc">원화 금액을 입력하면 다낭 일정에서 참고할 수 있는 예상 수령액을 계산합니다.</p>
+
+                        <div class="calc-grid">
+                            <div class="field">
+                                <label for="krwAmount">원화 (KRW)</label>
+                                <input id="krwAmount" type="text" inputmode="numeric" placeholder="예: 1000000"
+                                    value="0" />
+                            </div>
+                            <div class="field">
+                                <label for="exchangeRate">적용 환율</label>
+                                <input id="exchangeRate" type="text" inputmode="decimal" placeholder="예: 18.2"
+                                    value="18.2" />
+                            </div>
+                        </div>
+
+                        <div class="calc-actions">
+                            <button class="btn btn-gold" id="calcBtn" type="button">예상 수령액 계산</button>
+                            <button class="btn btn-dark" id="resetBtn" type="button">예시</button>
+                        </div>
+
+                        <div class="calc-preview">
+                            <div class="label">베트남 동 (VND) 예상 수령액</div>
+                            <div class="big" id="displayVnd">0 VND</div>
+
+                            <div class="calc-preview-grid">
+                                <div class="mini-metric">
+                                    <span>원화 금액</span>
+                                    <strong id="displayKrw">₩0</strong>
+                                </div>
+                                <div class="mini-metric">
+                                    <span>기준 환율</span>
+                                    <strong id="displayRate">18.2 VND / KRW</strong>
+                                </div>
+                            </div>
+
+                            <p class="calc-note">
+                                실제 적용 환율은 문의 시점 기준으로 안내됩니다. 계산값은 참고용으로 확인해주세요.
+                            </p>
+                        </div>
+                    </article>
+
+                    <aside class="calc-side">
+                        <div class="info-box">
+                            <h4>✦ 카지노 이용 전 환전</h4>
+                            <p>
+                                다낭 카지노 일정이 잡혀 있다면,<br />
+                                미리 여유 있게 준비해야 현지 동선이 훨씬 편해집니다.
+                            </p>
+                        </div>
+
+                        <div class="info-box">
+                            <h4>⛳ 골프 라운드 전 준비</h4>
+                            <p>
+                                그린피, 카트비, 식사, 간단한 비용까지 생각하면<br />
+                                라운드 전날 미리 환전을 정리해두는 편이 더 효율적입니다.
+                            </p>
+                        </div>
+
+                        <div class="info-box">
+                            <h4>🛍 쇼핑 & 식사 동선 정리</h4>
+                            <p>
+                                미케비치, 한시장, 로컬 식당, 리조트 주변 이동까지<br />
+                                다낭 여행은 생각보다 소액 현금이 필요한 순간이 자주 생깁니다.
+                            </p>
+                        </div>
+
+                        <div class="side-cta">
+                            <a class="btn btn-gold"
+                                href="https://search.naver.com/search.naver?sm=tab_hty.top&where=nexearch&ssc=tab.nx.all&query=%EB%B2%A0%ED%8A%B8%EB%82%A8+%ED%99%98%EC%9C%A8&oquery=%ED%99%98%EC%9C%A8+%ED%99%95%EC%9D%B8%ED%95%98%EA%B8%B0&tqi=jPOqFsqpsp4ssO7UdlG-460607&ackey=bkgfk9yj">지금
+                                환율 알아보기</a>
+                            <a class="btn btn-kakao" href="https://open.kakao.com/o/YOUR_KAKAO_OPENCHAT_LINK"
+                                target="_blank" rel="noopener">카카오톡 문의하기</a>
+                            <a class="btn btn-telegram" href="https://t.me/YOUR_TELEGRAM_USERNAME" target="_blank"
+                                rel="noopener">텔레그램 문의하기</a>
+                        </div>
+                    </aside>
+                </div>
+            </div>
+        </section>
+
+        <div class="scene-divider" aria-hidden="true">
+            <div class="line"><span class="label">Travel Reality</span></div>
+        </div>
+
+        <!-- TRAVEL REALITY -->
+        <section id="reality" class="section">
+            <div class="container">
+                <div class="reality-head">
+                    <span class="eyebrow">Travel Reality</span>
+                    <h2>여행이 시작됨과 동시에<br />결국 <span class="accent">환전이 필요한 순간</span>이 옵니다</h2>
+                    <p>
+                        카지노, 골프 라운드, 리조트 이동, 식사와 쇼핑까지. <br />
+                        다낭 일정은 보기보다 넓고 길어서 현금이 필요한 시점이 생각보다 자주 생깁니다.
+                    </p>
+                </div>
+
+                <div class="reality-grid">
+                    <article class="feature-media">
+                        <div class="feature-overlay">
+                            <h3>여행 동선 안에서<br />환전 타이밍을 놓치지 않도록</h3>
+                            <p>
+                                다낭에서는 리조트와 시내, 골프장, 카지노를 오가다 보면
+                                <span class="accent">“지금 환전이 더 필요하네”</span> 하는 순간이 금방 찾아옵니다.
+                            </p>
+                        </div>
+                    </article>
+
+                    <div class="mini-stack">
+                        <article class="mini-card">
+                            <div class="mini-card-top">
+                                <img src="https://sspark.genspark.ai/cfimages?u1=U9NNvSg%2B%2B7qH7w0iGsSkY5IujftPnPNS62OJCsmcXMUU97E5EgYjDYfsKPXxu45LxgP8xYsrUCKaAMtEb39airP%2BI0jysz88R906FeMx%2BfcCb6g4LHomtpZGozzYEN2%2FrjBWnEDxCOKOdRI0x0YtIW5J7Lvx2V5WkLXvGdVz6uL8dnznoUY%3D&u2=qlzXHyRq%2BI1jSwf6&width=2560"
+                                    alt="카지노 내부" />
+                                <div>
+                                    <h4>Casino Move</h4>
+                                    <p>
+                                        저녁 이동 전 필요한 금액을 미리 맞춰두는 구간.<br />
+                                        갑작스럽게 필요한 타이밍이 생길 수 있습니다.
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="chip-row">
+                                <span class="tag-chip">카지노 무드</span>
+                                <span class="tag-chip">현지 동선 최소화</span>
+                                <span class="tag-chip">빠른 문의 전환</span>
+                            </div>
+                        </article>
+
+                        <article class="mini-card">
+                            <div class="mini-card-top">
+                                <img src="https://sspark.genspark.ai/cfimages?u1=oJ8Lzewa21orD5IKT7Vv2thGrmdfm0ylomczMBXpIBBwIU7wHtNyiGZQ0ZArE16H37bkcmBcs4uw0RH47Pe9g9aAjR4%2FDNiQw2NXal1DrVtvNs%2FgGyCfX0kqNWZbFHnxXnTLu9JC5r%2F6cGvqoOLB9ZjyLXhoE2Nx&u2=z1sp5To85to0Fckn&width=2560"
+                                    alt="골프장 이미지" />
+                                <div>
+                                    <h4>Golf Day</h4>
+                                    <p>
+                                        라운딩 전후 실제 사용 구간에 맞춘 간결한 준비.<br />
+                                        그린피·식사·팁 등 비용이 생각보다 빨리 나갑니다.
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="chip-row">
+                                <span class="tag-chip">라운드 전 준비</span>
+                                <span class="tag-chip">캐디비 고려</span>
+                                <span class="tag-chip">현장 사용</span>
+                            </div>
+                        </article>
+
+                        <article class="mini-card">
+                            <div class="mini-card-top">
+                                <img src="https://sspark.genspark.ai/cfimages?u1=u4%2FM73sOOTtyC0cvuS49UgcOz8z4Qm4RUUIRvACGIerPhdgOBn0Mr%2F8exayjLxyvHaOl3LkQz5e0ZOMrnMwL2OTd4EEc1B3k5eako1kmH94O2g%3D%3D&u2=jcs4e%2BQRITUXOB3T&width=2560"
+                                    alt="다낭 리조트 이미지" />
+                                <div>
+                                    <h4>Resort & Move</h4>
+                                    <p>
+                                        체크인 이후 여유 있는 소비 흐름까지 함께 고려.<br />
+                                        초반 현금 준비가 중요합니다.
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="chip-row">
+                                <span class="tag-chip">해변·리조트 동선</span>
+                                <span class="tag-chip">쇼핑·식사 준비</span>
+                                <span class="tag-chip">휴양동선</span>
+                            </div>
+                        </article>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <div class="scene-divider" aria-hidden="true">
+            <div class="line"><span class="label">Solution Structure</span></div>
+        </div>
+
+        <!-- SOLUTION STRUCTURE -->
+        <section id="solution" class="section">
+            <div class="container">
+                <div class="reality-head">
+                    <span class="eyebrow">SOLUTION STRUCTURE</span>
+                    <h2> 필요한 시점의 해답<br /> <span class="accent">안전한 환전 서비스</span></h2>
+                    <p>
+                        여행이 시작되는 시점에 필요한 환전 <br />
+                        코이아나의 안전하고 편리한 환전 서비스가 솔루션이 되어줍니다.
+                    </p>
+                </div>
+                <div class="solution-layout">
+                    <article class="solution-visual">
+                        <div class="copy">
+                            <span class="eyebrow">Solution Structure</span>
+                            <h3> 흐름은 더 빠르게</h3>
+                            <p>
+                                단순히 얼마를 바꾸는지가 아니라, 언제 먼저 확인할지를 정리하면
+                                여행 동선 안에서 훨씬 안정적으로 움직일 수 있습니다.
+                            </p>
+                        </div>
+                    </article>
+
+                    <article class="card solution-card">
+                        <span class="eyebrow">Solution Structure</span>
+                        <h3>일정에 맞춰 보는 환전 구조</h3>
+                        <p>
+                            도착일, 리조트 위치, 저녁 일정, 골프 라운드 여부를 먼저 확인 후 <br />
+                            실제 진행 가능한 범위를 안내합니다.
+                        </p>
+
+                        <div class="solution-steps">
+                            <article class="step-card">
+                                <div class="step-icon">🗺️</div>
+                                <span class="step-mini">Travel Check</span>
+                                <h4>여행 일정 체크</h4>
+                                <p>
+                                    도착일, 리조트 위치, 저녁 일정, 골프 라운드 여부까지
+                                    전체 동선을 먼저 정리합니다.
+                                </p>
+                            </article>
+
+                            <article class="step-card">
+                                <div class="step-icon">💳</div>
+                                <span class="step-mini">Flow Timing</span>
+                                <h4>필요 금액 구간화</h4>
+                                <p>
+                                    초기에 필요한 금액과 일정 중 크게 필요한 구간을 나눠
+                                    타이밍별로 부담을 줄입니다.
+                                </p>
+                            </article>
+
+                            <article class="step-card">
+                                <div class="step-icon">⚡</div>
+                                <span class="step-mini">Fast Connect</span>
+                                <h4>문의 후 확정</h4>
+                                <p>
+                                    문의 시점 기준 실제 적용 가능 범위를 빠르게 확인하고
+                                    카카오톡·텔레그램으로 이어집니다.
+                                </p>
+                            </article>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <div class="scene-divider" aria-hidden="true">
+            <div class="line"><span class="label">Exchange Service</span></div>
+        </div>
+
+        <!-- EXCHANGE SERVICE -->
+        <section id="service" class="section">
+            <div class="container">
+                <div class="section-head">
+                    <div>
+                        <span class="eyebrow">Exchange Service</span>
+                        <h2> 필요한 순간을 표시해 둔<br />다낭의 <span class="accent">환전 가이드</span></h2>
+
+                        <p>
+                            <br />
+                            실제 여행지에서는 “나중에 해야지” 하고 넘긴 환전이. <br />
+                            일정 중간에 가장 불편한 순간으로 돌아오는 경우가 많습니다.<br />
+                            코이아나는 여행객 분들의 편리한 여행흐름을 돕습니다.
+                        </p>
+                    </div>
+                    <p>
+
+
+                    </p>
+                </div>
+
+                <div class="service-layout">
+                    <article class="service-visual">
+                        <div class="copy">
+                            <h3>일정 중 <span class="accent">환전이 필요한 순간</span>을<br />미리 체크하세요</h3 <p>
+                            공항 도착 직후, 카지노 이동 전, 골프장 이동 전처럼
+                            미리 정리해 두면 여행 흐름이 훨씬 편해집니다.
+                            </p>
+                        </div>
+                    </article>
+
+                    <article class="card service-panel">
+                        <div class="moment-card">
+                            <h4>이런 순간에 필요합니다</h4>
+                            <div class="moment-stack">
+                                <div class="moment-item">
+                                    <span class="moment-badge">필수</span>
+                                    <div>
+                                        <strong>공항 도착 후 첫 이동</strong>
+                                        <span>차량 이동, 소액 결제, 첫날 식사 등 바로 현금이 필요한 구간</span>
+                                    </div>
+                                </div>
+
+                                <div class="moment-item">
+                                    <span class="moment-badge">중요</span>
+                                    <div>
+                                        <strong>카지노 이동 전</strong>
+                                        <span>예정보다 금액이 커지는 경우가 많아 미리 확인이 필요한 타이밍</span>
+                                    </div>
+                                </div>
+
+                                <div class="moment-item">
+                                    <span class="moment-badge">체크</span>
+                                    <div>
+                                        <strong>골프 라운딩 전후</strong>
+                                        <span>이동비, 팁, 식음료, 부대비용 등 추가 사용이 생길 수 있는 구간</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="contact-block">
+                            <h4>빠른 문의 채널</h4>
+                            <p>
+                                문의 채널은 카카오톡과 텔레그램 우선 두 가지 유지<br />
+                                아래 placeholder 링크에 실제 링크로 변경 예정.
+                            </p>
+                            <div class="contact-row">
+                                <a class="btn btn-kakao" href="https://open.kakao.com/o/YOUR_KAKAO_OPENCHAT_LINK"
+                                    target="_blank" rel="noopener">카카오톡 문의</a>
+                                <a class="btn btn-telegram" href="https://t.me/YOUR_TELEGRAM_USERNAME" target="_blank"
+                                    rel="noopener">텔레그램 문의</a>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+
+                <div class="service-bottom">
+                    <article class="service-mini">
+                        <img src="https://sspark.genspark.ai/cfimages?u1=ocZB6I7GBhqJTcLQIWL22O0LpAyKb3R1pRBzTm79JsaXnUKxxERcFK8O55GSL%2BqlBeGTSP4emI14Ur5lXjRm3fDy6fk%2F%2FKFjqe8P82zSyqukzg%3D%3D&u2=mBzbUvNO1wkp18K6&width=2560"
+                            alt="카지노 관련 이미지" />
+                        <div class="copy">
+                            <h4>카지노 방문 전 준비</h4>
+                            <p>
+                                저녁 일정이 길어질 수 있으니,<br />
+                                이동 전에 필요한 금액을 한 번 더 확인해 두면 훨씬 편합니다.
+                            </p>
+                        </div>
+                    </article>
+
+                    <article class="service-mini">
+                        <img src="https://sspark.genspark.ai/cfimages?u1=LAImmH5N%2Bhl606ZT%2FfCKsVl0q5c5RFBvuSmQso5lqBTFBTk33Pabtezy4rm2BmYwf1398OdJtjHgAqlajGu7HIjKXxgaRbKGwrl8IRyuqMVOT4Vc&u2=fzrfz5Mo8lczcgwS&width=2560"
+                            alt="골프장 이미지" />
+                        <div class="copy">
+                            <h4>골프 일정 전 준비</h4>
+                            <p>
+                                그린피, 카트비, 식사, 간단한 비용까지 생각하면<br />
+                                라운드 전날 미리 정리해 두는 편이 더 효율적입니다.
+                            </p>
+                        </div>
+                    </article>
+
+                    <article class="service-mini">
+                        <img src="https://sspark.genspark.ai/cfimages?u1=tUAM2BN3v83srEZdJhmrD2iNyt0T%2FL9n28mj3K22WqqMnLnFneCFtBT9Kh1OPAPoWBPkhQQzbY%2BORyz4%2BjGfPjiTl9p4C5ZlSucejJual48ENg%3D%3D&u2=IPMx4JtJnQfsvQF3&width=2560"
+                            alt="다낭 리조트 이미지" />
+                        <div class="copy">
+                            <h4>리조트 · 쇼핑 동선 정리</h4>
+                            <p>
+                                리조트, 해변, 시내 식사와 쇼핑까지 이어지면<br />
+                                생각보다 소액 현금이 필요한 순간이 자주 생깁니다.<br / </p>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <div class="scene-divider" aria-hidden="true">
+            <div class="line"><span class="label">Golf & Travel Flow</span></div>
+        </div>
+
+        <!-- FLOW -->
+        <section id="flow" class="section">
+            <div class="container">
+                <div class="flow-wrap">
+                    <article class="flow-visual">
+                        <div class="copy">
+                            <span class="eyebrow">Golf & Travel Flow</span>
+                            <h3>골프와 여행의 흐름 속에<br />환전 준비를 자연스럽게 끼워 넣습니다</h3>
+                            <p>
+                                일정이 시작된 뒤가 아니라, 시작되기 전에 확인해 두는 편이 가장 편합니다.
+                                골프 일정도 결국 여행의 한 흐름 안에서 움직입니다.
+                            </p>
+                        </div>
+                    </article>
+
+                    <article class="card flow-card">
+                        <span class="eyebrow">Golf & Travel Flow</span>
+                        <h3>도착부터 라운딩까지<br />한 번에 보는 이동 흐름</h3>
+                        <p>
+                            일정이 시작되면 생각보다 빠르게 시간이 지나갑니다.
+                            필요한 순간 전에 미리 준비할 수 있도록 흐름 중심으로 정리했습니다.
+                        </p>
+
+                        <div class="flow-grid">
+                            <article class="flow-item">
+                                <div class="no">01</div>
+                                <h4>Arrival</h4>
+                                <p>공항 도착 후 숙소 이동, 간단한 식사와 첫 사용 금액 확인</p>
+                            </article>
+
+                            <article class="flow-item">
+                                <div class="no">02</div>
+                                <h4>Resort Check-in</h4>
+                                <p>체크인 이후 당일 저녁 일정과 다음 날 계획 기준으로 금액 조정</p>
+                            </article>
+
+                            <article class="flow-item">
+                                <div class="no">03</div>
+                                <h4>Casino / City Move</h4>
+                                <p>야간 일정 또는 시내 이동 전 필요한 현금 흐름 재확인</p>
+                            </article>
+
+                            <article class="flow-item">
+                                <div class="no">04</div>
+                                <h4>Golf Day</h4>
+                                <p>라운딩 출발 전후 부대비용 포함 전체 일정 기준으로 최종 체크</p>
+                            </article>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <div class="scene-divider" aria-hidden="true">
+            <div class="line"><span class="label">Premium Scenes</span></div>
+        </div>
+
+        <!-- Premium Scenes -->
+        <section class="section">
+            <div class="container">
+                <div class="why-head">
+                    <span class="eyebrow">Premium Scenes</span>
+                    <h2>다낭에서 자주 연결되는<br />주요 장면들 <h2>
+                            <p>
+                                기존 구조는 유지하되, 여행 일정과 연결된 실전형 안내라는 장점을
+                                더 선명하게 전달할 수 있도록 구성했습니다.
+                            </p>
+                </div>
+
+                <div class="why-grid">
+                    <article class="why-row-card">
+                        <img src="https://sspark.genspark.ai/cfimages?u1=pKq4BcsLVKHIJDPcD8I2jNFoMHxICbtbQCfjW9BqnA5csjBa3gKF8vFAn7GshGzM2d8yVlbTiXX6TluaZYob2iGkw4JLbVs1AibFxWqZcmLM3Rfd9dezWVc805BQnwtvUAxtjiGW%2FV5VGlHNyBxJ4Z6FSw9SLg%3D%3D&u2=xrpwpmxkhb5CYX5D&width=2560"
+                            alt="도시와 이동 동선 이미지" />
+                        <div class="copy">
+                            <h4>Da Nang Resort Mood</h4>
+                            <p>
+                                리조트 중심 일정에서는 체크인 이후의<br />
+                                이동 여유와 부대시설 사용 흐름까지<br />
+                                함께 고려하는 편이 훨씬 안정적입니다.
+                            </p>
+                        </div>
+                    </article>
+
+                    <article class="why-row-card">
+                        <img src="https://sspark.genspark.ai/cfimages?u1=JUazz%2FKUpdCjFxWMylx84%2BIGL5meIPpoe7aWcxf3fhoBcYHMMR%2FR%2B9Rw1oL7dJWY%2FjnT7F3D6AfHFh5G%2BeidrfTN%2BWWLHBn%2FMvhVraEkhNIw6w%3D%3D&u2=nyKNP9JBfiLT2FNY&width=2560"
+                            alt="빠른 계산과 금융 이미지" />
+                        <div class="copy">
+                            <h4>Casino Table Timing</h4>
+                            <p>
+                                저녁 일정이 중심이 되는 날에는<br />카지노 이동 전에 필요한 금액을<br />한 번에 맞추는 방식이 가장 효율적입니다.
+                            </p>
+                        </div>
+                    </article>
+
+                    <article class="why-row-card">
+                        <img src="https://sspark.genspark.ai/cfimages?u1=SapjhOJeiCQPcS%2Fwq%2F8GSgEbBfqC3F6VjahoscacKy5WD0niCOgH9oOEpJKn9O6hXo%2By6znU82ay3zO2aOfZNWnS0%2FUBMagxIlHIbX%2FnCLHpcw%3D%3D&u2=lgrOiW3BTZLHtSi7&width=2560"
+                            alt="골프 여행 이미지" />
+                        <div class="copy">
+                            <h4>Golf Course Detail</h4>
+                            <p>
+                                라운딩 일정은 출발 전 준비와<br />
+                                현장 사용 구간이 분명해서<br />필요한 금액을 깔끔하게 구분하기 좋습니다.
+                            </p>
+                        </div>
+                    </article>
+
+                    <article class="why-row-card">
+                        <img src="https://sspark.genspark.ai/cfimages?u1=lrh9U66XPB389%2FL1bNPX39Qr132H9xs0JT3NzdrZ51g6kO9xT8wd6zApmQHS5GG5QimfepZduGIppJ2smK%2F7OAa5Y91Mub5bWzdyWoqMw7KezQWY%2FDxnHjuyx%2FIbqcpzWXpMXOlqiSZtbkELA%2BGFtJrps2eIBSJeYom3Q5GoJqKnX5lQ&u2=uKZoc6yW797THQot&width=2560"
+                            alt="다낭 해변 이미지" />
+                        <div class="copy">
+                            <h4>Holiday Escape</h4>
+                            <p>
+                                여행 막바지에는 남은 일정과 귀국 전<br />
+                                소비를 함께 보면서 잔액 부담이 적은 방식으로<br />
+                                정리하는 편이 좋습니다.
+                            </p>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <div class="scene-divider" aria-hidden="true">
+            <div class="line"><span class="label">why KOIANA</span></div>
+        </div>
+
+        <!-- WHY KOIANA -->
+        <section class="section">
+            <div class="container">
+                <div class="why-head">
+                    <span class="eyebrow">Why KOIANA</span>
+                    <h2> 왜 많은 분들이<br /><span class="accent">KOIANA를 선호</span>하는가</h2>
+                    <p>
+                        선호하는 이유 두 줄 정도로 카피라이팅 <br />
+                        이미지도 변경 필요함..
+                    </p>
+                </div>
+
+                <div class="why-grid">
+                    <article class="why-row-card">
+                        <img src="https://images.unsplash.com/photo-1525625293386-3f8f99389edd?auto=format&fit=crop&w=1200&q=80"
+                            alt="도시와 이동 동선 이미지" />
+                        <div class="copy">
+                            <h4>일정 기반 설명</h4>
+                            <p>
+                                공항, 리조트, 카지노, 골프장 등 실제 이동 흐름 중심으로
+                                이해하기 쉽도록 정리했습니다.
+                            </p>
+                        </div>
+                    </article>
+
+                    <article class="why-row-card">
+                        <img src="https://images.unsplash.com/photo-1640161704729-cbe966a08476?auto=format&fit=crop&w=1200&q=80"
+                            alt="빠른 계산과 금융 이미지" />
+                        <div class="copy">
+                            <h4>빠른 계산 확인</h4>
+                            <p>
+                                원화 입력만으로 예상 수령액을 즉시 보고,
+                                문의 전 대략적인 규모를 빠르게 볼 수 있습니다.
+                            </p>
+                        </div>
+                    </article>
+
+                    <article class="why-row-card">
+                        <img src="https://images.unsplash.com/photo-1535131749006-b7f58c99034b?auto=format&fit=crop&w=1200&q=80"
+                            alt="골프 여행 이미지" />
+                        <div class="copy">
+                            <h4>실전 여행형 전체 구조</h4>
+                            <p>
+                                골프 여행객이 익숙하게 느낄 수 있는 흐름 안에서
+                                환전 타이밍까지 자연스럽게 이어집니다.
+                            </p>
+                        </div>
+                    </article>
+
+                    <article class="why-row-card">
+                        <img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=1200&q=80"
+                            alt="다낭 해변 이미지" />
+                        <div class="copy">
+                            <h4>채널 단순화</h4>
+                            <p>
+                                카카오톡 / 텔레그램 두 채널만 남겨
+                                실제 운영 연결 동선을 더 깔끔하게 유지합니다.
+                            </p>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <div class="scene-divider" aria-hidden="true">
+            <div class="line"><span class="label">Reviews</span></div>
+        </div>
+
+        <!-- REVIEWS -->
+        <section id="reviews" class="section">
+            <div class="container">
+                <div class="reviews-head">
+                    <span class="eyebrow">Reviews</span>
+                    <h2> 실제 문의 전<br /> 가장 많이 보는 <span class="accent"> 후기 포인트</span></h2>
+                    <p>
+                        사용자가 가장 중요하게 보는 부분은 복잡한 설명보다
+                        “언제 필요했고, 얼마나 편했는지”에 대한 실제 체감입니다.
+                    </p>
+                </div>
+
+                <div class="reviews">
+                    <article class="review">
+                        <div class="stars">★★★★★</div>
+                        <p>
+                            공항 도착 후 바로 일정이 이어졌는데,
+                            언제 얼마 정도 필요할지 감이 잡혀서 훨씬 편했습니다.
+                        </p>
+                        <div class="author">이*영 · 가족 여행 일정</div>
+                    </article>
+
+                    <article class="review">
+                        <div class="stars">★★★★★</div>
+                        <p>
+                            카지노 일정 전에 한 번 더 체크할 수 있어서 좋았고,
+                            계산기가 직관적이라 문의 전 확인용으로 좋았습니다.
+                        </p>
+                        <div class="author">이*영 · 커플 여행 일정</div>
+                    </article>
+
+                    <article class="review">
+                        <div class="stars">★★★★★</div>
+                        <p>
+                            골프 라운딩 전후 추가 비용까지 생각하게 돼서
+                            실제 현장에서는 훨씬 여유가 있었습니다.
+                        </p>
+                        <div class="author">이*영 · 골프 여행 일정</div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <div class="scene-divider" aria-hidden="true">
+            <div class="line"><span class="label">FAQ</span></div>
+        </div>
+
+        <!-- FAQ -->
+        <section id="faq" class="section">
+            <div class="container">
+                <div class="faq-head">
+                    <span class="eyebrow">FAQ</span>
+                    <h2>자주하는 질문</h2>
+                    <p>
+                        실제 문의 전에 가장 많이 확인하는 내용을 간단하게 정리했습니다.
+                    </p>
+                </div>
+
+                <div class="faq-list">
+                    <details class="faq-item">
+                        <summary>계산기의 금액이 최종 확정 금액인가요?</summary>
+                        <div class="faq-body">
+                            아닙니다. 계산기는 예상 수령액 확인용이며,
+                            실제 적용 환율은 문의 시점 기준으로 안내됩니다.
+                        </div>
+                    </details>
+
+                    <details class="faq-item">
+                        <summary>왜 일정에 따라 필요한 금액이 달라지나요?</summary>
+                        <div class="faq-body">
+                            공항 도착, 리조트 체크인, 카지노 이동, 골프 라운딩 등
+                            실제 동선에 따라 필요한 현금 시점이 달라지기 때문입니다.
+                        </div>
+                    </details>
+
+                    <details class="faq-item">
+                        <summary>문의 채널은 어떤 것만 남겨두었나요?</summary>
+                        <div class="faq-body">
+                            카카오톡과 텔레그램 두 채널만 유지했습니다.
+                            페이지 내 placeholder 링크만 교체하면 바로 사용 가능합니다.
+                        </div>
+                    </details>
+
+                    <details class="faq-item">
+                        <summary>소액과 고액 환전 기준을 따로 봐야 하나요?</summary>
+                        <div class="faq-body">
+                            보통 첫날 소액 사용과 일정 중 큰 금액이 필요한 시점을 나눠 보는 방식이
+                            훨씬 실용적입니다.
+                        </div>
+                    </details>
+
+                    <details class="faq-item">
+                        <summary>모바일에서도 그대로 사용할 수 있나요?</summary>
+                        <div class="faq-body">
+                            네. 반응형으로 구성되어 있으며,
+                            하단 모바일 고정 CTA도 카카오톡 / 텔레그램 2개만 유지되도록 설계했습니다.
+                        </div>
+                    </details>
+                </div>
+            </div>
+        </section>
+
+        <!-- FINAL HERO -->
+        <section class="final-hero">
+            <div class="container final-inner">
+                <div class="final-copy">
+                    <span class="eyebrow">Now Ask Comfortably</span>
+                    <h2>다낭 환전,<br /><span class="gold">지금 바로</span><br />시작해보세요</h2>
+                    <p>
+                        카지노, 방문 전, 골프 라운드 전, 숙소 이동 중,<br />
+                        여행의 분위기는 그대로 두고 결정만 더 편하게 정리하세요.<br />
+                        카카오톡, 텔레그램 두 채널만 바로 이어질 수 있습니다.
+                    </p>
+                </div>
+
+                <aside class="final-panel">
+                    <h3>가장 빠른 문의 채널</h3>
+                    <p>
+                        계산이 끝났다면 정확한 조건은 문의에서 확인됩니다.
+                        오늘 일정에 맞게 필요한 환전 흐름을 빠르게 안내해드립니다.
+                    </p>
+
+                    <div class="final-list">
+                        <div class="item">
+                            <strong>빠른 환율 확인</strong>
+                            <span>실제 일정 기준 어떤 흐름이 편한지 바로 문의</span>
+                        </div>
+                        <div class="item">
+                            <strong>골프 · 카지노 일정 연계</strong>
+                            <span>여행 흐름 안에서 환전 타이밍 정리</span>
+                        </div>
+                        <div class="item">
+                            <strong>부담 없는 시작</strong>
+                            <span>긴 설명 없이 바로 연결되는 문의 구조</span>
+                        </div>
+                    </div>
+
+                    <div class="final-actions">
+                        <a class="btn btn-gold"
+                            href="https://search.naver.com/search.naver?sm=tab_hty.top&where=nexearch&ssc=tab.nx.all&query=%EB%B2%A0%ED%8A%B8%EB%82%A8+%ED%99%98%EC%9C%A8&oquery=%ED%99%98%EC%9C%A8+%ED%99%95%EC%9D%B8%ED%95%98%EA%B8%B0&tqi=jPOqFsqpsp4ssO7UdlG-460607&ackey=bkgfk9yj">환율
+                            확인하기</a>
+                        <a class="btn btn-kakao" href="https://open.kakao.com/o/YOUR_KAKAO_OPENCHAT_LINK"
+                            target="_blank" rel="noopener">카카오 문의</a>
+                        <a class="btn btn-telegram" href="https://t.me/YOUR_TELEGRAM_USERNAME" target="_blank"
+                            rel="noopener">텔레그램 문의</a>
+                    </div>
+                </aside>
+            </div>
+        </section>
+
+        <footer>
+            <div class="container">
+                <div class="footer-grid">
+                    <div class="footer-col">
+                        <h4>KOIANA</h4>
+                        <p>
+                            다낭 환전, 여행 동선, 골프 일정까지 하나의 흐름으로 연결하는
+                            프리미엄 컨시어지 브랜드.
+                        </p>
+                    </div>
+
+                    <div class="footer-col">
+                        <h4>Contact</h4>
+                        <ul>
+                            <li><a href="https://open.kakao.com/o/YOUR_KAKAO_OPENCHAT_LINK" target="_blank"
+                                    rel="noopener">카카오톡</a></li>
+                            <li><a href="https://t.me/YOUR_TELEGRAM_USERNAME" target="_blank" rel="noopener">텔레그램</a>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="footer-col">
+                        <h4>Info</h4>
+                        <p>© 2026 KOIANA.<br />All rights reserved.</p>
+                    </div>
+                </div>
+            </div>
+        </footer>
+
+    </main>
+
+    <!-- Floating CTA -->
+    <div class="floating-cta" aria-label="빠른 문의 버튼">
+        <a class="btn btn-gold"
+            href="https://search.naver.com/search.naver?sm=tab_hty.top&where=nexearch&ssc=tab.nx.all&query=%EB%B2%A0%ED%8A%B8%EB%82%A8+%ED%99%98%EC%9C%A8&oquery=%ED%99%98%EC%9C%A8+%ED%99%95%EC%9D%B8%ED%95%98%EA%B8%B0&tqi=jPOqFsqpsp4ssO7UdlG-460607&ackey=bkgfk9yj">지금
+            환율 알아보기</a>
+        <a class="btn btn-kakao" href="https://open.kakao.com/o/YOUR_KAKAO_OPENCHAT_LINK" target="_blank"
+            rel="noopener">카카오 문의</a>
+        <a class="btn btn-telegram" href="https://t.me/YOUR_TELEGRAM_USERNAME" target="_blank" rel="noopener">텔레그램
+            문의</a>
+    </div>
+
+    <!-- Mobile CTA -->
+    <div class="mobile-cta" aria-label="모바일 빠른 문의">
+        <a class="btn btn-kakao" href="https://open.kakao.com/o/YOUR_KAKAO_OPENCHAT_LINK" target="_blank"
+            rel="noopener">카카오 문의</a>
+        <a class="btn btn-telegram" href="https://t.me/YOUR_TELEGRAM_USERNAME" target="_blank" rel="noopener">텔레그램
+            문의</a>
+    </div>
+
+    <script>
+        (function () {
+            const krwInput = document.getElementById('krwAmount');
+            const rateInput = document.getElementById('exchangeRate');
+            const calcBtn = document.getElementById('calcBtn');
+            const resetBtn = document.getElementById('resetBtn');
+
+            const displayKrw = document.getElementById('displayKrw');
+            const displayRate = document.getElementById('displayRate');
+            const displayVnd = document.getElementById('displayVnd');
+
+            const DEFAULT_KRW = 1000000;
+            const DEFAULT_RATE = 18.2;
+
+            function parseNumber(value) {
+                if (!value) return 0;
+                const cleaned = String(value).replace(/,/g, '').replace(/[^\d.]/g, '');
+                const parsed = parseFloat(cleaned);
+                return Number.isFinite(parsed) ? parsed : 0;
+            }
+
+            function formatKRW(value) {
+                return '₩' + Math.round(value).toLocaleString('ko-KR');
+            }
+
+            function formatVND(value) {
+                return Math.round(value).toLocaleString('en-US') + ' VND';
+            }
+
+            function formatRate(value) {
+                const num = parseFloat(value);
+                if (!Number.isFinite(num)) return DEFAULT_RATE.toString();
+                return Number.isInteger(num)
+                    ? String(num)
+                    : num.toFixed(2).replace(/\.00$/, '').replace(/(\.\d)0$/, '$1');
+            }
+
+            function updateCalc() {
+                const krw = parseNumber(krwInput.value);
+                const rate = parseNumber(rateInput.value);
+                const vnd = krw * rate;
+
+                displayKrw.textContent = formatKRW(krw);
+                displayVnd.textContent = formatVND(vnd);
+                displayRate.textContent = formatRate(rate) + ' VND / KRW';
+            }
+
+            function resetCalc() {
+                krwInput.value = DEFAULT_KRW.toLocaleString('ko-KR');
+                rateInput.value = DEFAULT_RATE;
+                updateCalc();
+            }
+
+            if (krwInput) {
+                krwInput.addEventListener('input', function () {
+                    const numeric = parseNumber(this.value);
+                    if (numeric > 0) {
+                        this.value = Math.round(numeric).toLocaleString('ko-KR');
+                    } else if (this.value.replace(/[^\d]/g, '') === '') {
+                        this.value = '';
+                    }
+                    updateCalc();
+                });
+            }
+
+            if (rateInput) rateInput.addEventListener('input', updateCalc);
+            if (calcBtn) calcBtn.addEventListener('click', updateCalc);
+            if (resetBtn) resetBtn.addEventListener('click', resetCalc);
+
+            document.addEventListener('DOMContentLoaded', function () {
+                if (krwInput && !krwInput.value) krwInput.value = DEFAULT_KRW.toLocaleString('ko-KR');
+                if (rateInput && !rateInput.value) rateInput.value = DEFAULT_RATE;
+                updateCalc();
+            });
+
+            updateCalc();
+        })();
+    </script>
+</body>
+
+</html>
